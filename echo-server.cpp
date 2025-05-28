@@ -65,7 +65,8 @@ void *handle_client(void *arg) {
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {
-        fprintf(stderr, "Usage: %s <port> [-e] [-b]\n", argv[0]);
+        printf("syntax : echo-server <port> [-e[-b]\n]");
+	printf("sample : echo-server 1234 -e -b\n");
         exit(EXIT_FAILURE);
     }
     int port = atoi(argv[1]);

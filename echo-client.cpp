@@ -28,7 +28,8 @@ void *recv_thread(void *arg) {
 
 int main(int argc, char *argv[]) {
     if (argc != 3) {
-        fprintf(stderr, "Usage: %s <ip> <port>\n", argv[0]);
+        printf("syntax : echo-client <ip> <port>\n");
+	printf("sample : echo-client 192.168.10.2 1234\n");
         exit(EXIT_FAILURE);
     }
     const char *ip = argv[1];
