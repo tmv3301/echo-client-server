@@ -41,7 +41,7 @@ void *handle_client(void *arg) {
     int len;
     while ((len = recv(client_sock, buf, sizeof(buf)-1, 0)) > 0) {
         buf[len] = '\0';
-        printf("Recieved Message from Server %d : %s", client_sock, buf);
+        printf("Recieved Message %d : %s", client_sock, buf);
 
         if (echo_flag) {
             send(client_sock, buf, len, 0);
