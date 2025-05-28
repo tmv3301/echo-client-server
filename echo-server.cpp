@@ -96,7 +96,7 @@ int main(int argc, char *argv[]) {
     while (1) {
         struct sockaddr_in cli_addr;
         socklen_t cli_len = sizeof(cli_addr);
-        int *cli_sock = malloc(sizeof(int));
+        int *cli_sock = (int*)malloc(sizeof(int));
         *cli_sock = accept(serv_sock, (struct sockaddr*)&cli_addr, &cli_len);
         if (*cli_sock < 0) {
             perror("accept");
